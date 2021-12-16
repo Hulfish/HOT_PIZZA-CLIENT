@@ -1,0 +1,44 @@
+.cart-menu-offcanvas {
+    transition: 500ms;
+    right: 0;
+    top: 0;
+    margin-top: 66px;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    background: #ffffff;
+    border-left: solid 2px rgb(190, 190, 190);
+}
+
+.cart-menu-offcanvas-mobile {
+    transition: 500ms;
+    right: 0;
+    top: 0;
+    margin-top: 66px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #ffffff;
+    border-left: solid 2px rgb(190, 190, 190);
+}
+
+.cart-menu-offcanvas div.cart-menu-offcanvas-body {
+    padding: 20px;
+    height: calc(100vh - 66px);
+    position: fixed;
+    width: 300px;
+}
+
+.cart-menu-offcanvas-mobile div.cart-menu-offcanvas-body {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+}
+
+#main {
+    transition: 500ms;
+    margin-right: 0px;
+}
+

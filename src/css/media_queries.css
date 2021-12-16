@@ -1,0 +1,9 @@
+@media (max-width: 480px) {
+    .admin-page button.button-toggle {
+        font-size: 14px;
+        height: 40px
+    }
+    .admin-page {
+        padding: 0;
+    }
+  }

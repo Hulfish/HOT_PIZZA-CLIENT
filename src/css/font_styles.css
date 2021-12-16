@@ -1,0 +1,57 @@
+
+.f-si-12 {
+    font-size: 12px;
+}
+
+.f-si-14 {
+    font-size: 14px;
+}
+
+.f-si-16 {
+    font-size: 16px;
+}
+
+.f-si-18 {
+    font-size: 18px;
+}
+
+.f-si-20 {
+    font-size: 20px;
+}
+
+.f-si-22 {
+    font-size: 22px;
+}
+.f-si-24 {
+    font-size: 24px;
+}
+.f-si-26 {
+    font-size: 26px;
+}
+
+.category {
+    color: #818181;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+.category.active {
+    color: #000000;
+}
+
+.f-st-b {
+    font-weight: bold;
+}
+
+.f-w-500 {
+    font-weight: 500;
+}
+
+.font-product-name {
+    font-weight: 500;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}

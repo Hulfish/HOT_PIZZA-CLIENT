@@ -1,0 +1,534 @@
+:root {
+  --card_border_radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-corner{
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgb(204, 204, 204);
+  box-shadow: inset 1px 1px 10px #ffffff;
+}
+
+body {
+  
+  width: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  transition: 500ms;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.__navbar {
+  background: #000000;
+  height: 66px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.__navbar div.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-frame{
+  min-height: 100vh;
+}
+
+.scroll-fixed {
+  position: fixed;
+}
+
+.footer {
+  height: fit-content;
+  color: #ffffff;
+  background: rgb(20, 20, 20);
+}
+
+.footer-body {
+  padding: 20px;
+}
+
+.footer-end {
+  color: #ffffffe3;
+  height: 16px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+.list-footer {
+  list-style: none;
+  padding: 0;
+}
+
+.list-footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.list-footer a:hover {
+  color: gray;
+}
+
+.btn-nav {
+  margin-top: 5px;
+  border: none;
+  background: #000000;
+}
+
+.btn-nav:active {
+  background: #3a3a3a;
+}
+
+.logo-img-lg {
+  width: 250px;
+}
+
+.logo-img-sm {
+  width: 130px;
+}
+
+
+
+
+.sub_category-btn {
+  transition: 200ms;
+  border: none;
+  background: rgb(216, 216, 216);
+  font-size: 14px;
+  border-radius: 15px;
+  height: 25px;
+  margin-right: 10px;
+  padding-bottom: 7px;
+  margin-top: 12px;
+}
+
+
+.sub_category-btn.active {
+  transition: 200ms;
+  color: #fff;
+  background: rgb(53, 53, 53);
+}
+
+.food-card {
+  transition: all 100ms;
+  
+  width: 155px; 
+
+  height: 100%;
+  background: #fcfcfc;
+  margin-left: 0px;
+  margin-right: 18px;
+  margin-bottom: 20px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: solid 1px rgb(233, 233, 233);
+}
+
+.food-card:hover {
+  transition: all 100ms;
+  background: #ffffff;
+
+  box-shadow: #ff0000;
+  box-shadow:  0px 0px 15px 1px rgb(160, 160, 160);
+  border: solid 1px #9b9b9b;
+}
+
+.food-card button {
+  transition: all 100ms;
+  padding: 4px 10px 4px 10px;
+  border: none;
+  color: white;
+  background: rgb(51, 51, 51);
+  border-radius: 5px;
+}
+
+.food-card button:hover {
+  transition: all 100ms;
+  background: rgb(82, 82, 82)
+}
+
+.food-card button:active {
+  background: rgb(182, 182, 182)
+}
+
+.food-card-description {
+  padding: 5px 10px 0px 10px;
+}
+
+.cart-img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-radius:5px 5px 0px 0px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none; 
+}
+
+
+.nav-link:hover {
+  color: rgb(207, 207, 207);
+  text-decoration: underline; 
+}
+
+
+
+#shadow {
+  background: rgb(250, 130, 32);
+  box-shadow: 0px 0px 30px black;
+}
+
+
+
+#mobile-navbar {
+  z-index: -1;
+  transition: all 300ms;
+  position: fixed;
+  background: #000000;
+  color: white;
+  opacity: 0;
+  
+  height: 300px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.mobile-nav-body {
+  padding: 10px 10px 20px 10px;
+  border-top: 1px solid rgb(78, 78, 78);
+}
+
+#mobile-navbar.active {
+  z-index: 1;
+  transition-duration: 200ms;
+  transition-property: opacity;
+  margin-top: 0px;
+  border-bottom: solid 1px rgb(104, 104, 104);
+  opacity: 1;
+}
+
+#mobile-navbar a {
+  text-decoration: none;
+  color: white
+}
+
+#mobile-navbar a:active {
+  color: rgb(148, 148, 148)
+}
+
+#mobile-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#mobile-navbar li {
+  text-align: center;
+}
+
+#mobile-navbar li:active {
+  text-align: center;
+  color: gray
+}
+
+.modal {
+  transition: all 500ms;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #00000080;
+}
+
+.modal-closing {
+  transition: all 500ms;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+.btn-close-general{
+  padding: 0 6px 2px 6px;
+  background: local;
+  border: none;
+  border-radius: 4px;
+}
+
+.cards-flex-container {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 100px 0;
+}
+
+.food-card {
+  flex-grow: 1;
+}
+
+.sub-category{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-deco-less {
+  padding: 0;
+}
+.list-deco-less li {
+  list-style: none;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-submit-button {
+  transition: all 200ms;
+  border: none;
+  font-weight: 400;
+  color: white;
+  background: rgba(70, 70, 70, 0.959);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+
+.form-submit-button:hover {
+  transition: all 200ms;
+  background: rgb(26, 26, 26);
+}
+
+.form-submit-button:active {
+  background: rgb(148, 148, 148);
+}
+
+.order-button {
+  height: 60px;
+  width: 100% ;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 136, 0, 0.74);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.order-button:hover{
+  background: rgba(255, 136, 0, 0.60)
+}
+
+.order-button:active{
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.h-100{
+  height: 100%;
+}
+
+.checkout-cart-list {
+  padding: 0;
+  max-height: 450px;
+}
+
+.cart-list li{
+  list-style: none;
+  
+}
+
+.btn-black {
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  color: white;
+  background: #000;
+}
+
+.btn-black a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.btn-black.w-100 {
+  width: 100%;
+}
+
+.cart-list {
+  height: calc(100vh - 220px);
+  margin-left: 0;
+  padding: 0;
+  width: 100%
+}
+
+.cart-list ul {
+  padding-left: 0;
+}
+
+.cart-list li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cart-item {
+  padding: 10px;
+  /* background: rgba(160, 160, 160, 0.699); */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.cart-item button {
+  color: white;
+  background: rgb(61, 61, 61);
+  border: none;
+  border-radius: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  align-items: center;
+  margin: 0 2px;
+}
+
+.cart-item button:hover {
+  background: #000000cc;
+}
+
+.admin-page {
+  padding: 0 50px;
+}
+
+.admin-page button.button-toggle {
+  height: 50px;
+  width: 100%;
+  background: #D4D4D4;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+}
+
+.admin-page button.button-toggle div {
+  align-self: center;
+  padding: 0 10px;
+}
+
+.admin-meeting {
+  background: #CDFFFC;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 32px;
+  display: flex;
+  padding: 0 20px;
+}
+
+.admin-meeting div {
+  align-self: center;
+}
+
+textarea {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.dish-modal-item {
+  background: #e4e4e4;
+  margin-top: 10px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.dish-modal-item:hover {
+  border: 1px solid gray;
+}
+
+.dish-modal-item img {
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.choose-bar {
+  background: rgb(241, 241, 241);
+  margin: 0;
+}
+
+.delete-button {
+  background: rgb(194, 63, 63);
+  color: rgb(255, 255, 255);
+}
+
+.delete-button:hover {
+  background: rgb(255, 99, 99);
+}
+
+.btn-regular {
+  border: none;
+  border-radius: 4px;
+  background: rgba(228, 228, 228, 0);
+  border: 1px solid rgb(80, 80, 80);
+}
+
+.btn-regular:hover {
+  transition: all 200ms;
+  background: rgb(201, 201, 201);
+}

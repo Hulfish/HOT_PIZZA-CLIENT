@@ -1,0 +1,25 @@
+.module-form {
+    background: rgb(235, 235, 235);
+    border-radius: 5px;
+    padding: 40px;
+}
+
+#checkout-promocode-form button {
+    border: none;
+    height: 48px;
+    background: rgb(48, 48, 48);
+    color: white;
+    border-radius: 5px;
+    margin-left: 20px
+}
+
+#checkout-promocode-form button:hover {
+    background: rgb(92, 92, 92);
+}
+
+@media (max-width: 575px) {
+    .module-form{
+        padding: 20px;
+    }
+}
+
